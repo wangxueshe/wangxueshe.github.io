@@ -19,7 +19,7 @@ feature_row:
 
   - image_path: "/assets/images/composition.png"
     title: "Composition"
-    excerpt: "A collections of music and video compositions. You could also find them from my [bilibili page](https://https://space.bilibili.com/2724886). <br><br>"
+    excerpt: "A collections of music and video compositions. You could also find them from my [bilibili page](https://space.bilibili.com/2724886). <br><br>"
     url: "/compositions/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
