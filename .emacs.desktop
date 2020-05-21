@@ -2,7 +2,7 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Wed Mar 25 01:19:08 2020
+;; Created Thu May 21 09:49:46 2020
 ;; Desktop file format version 206
 ;; Emacs version 22.1.1
 
@@ -16,13 +16,13 @@
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
 (desktop-create-buffer 206
-  "/Users/WangXueshe/Desktop/Home Page/wangxueshe.github.io/index.html"
-  "index.html"
-  'html-mode
+  "/Users/WangXueshe/Desktop/Home Page/wangxueshe.github.io/_config.yml"
+  "_config.yml"
+  'fundamental-mode
   '(global-auto-revert-mode)
-  18
+  8038
   '(nil nil)
   nil
   nil
-  '((buffer-file-coding-system . undecided-unix)))
+  '((buffer-file-coding-system . mule-utf-8-unix)))
 
