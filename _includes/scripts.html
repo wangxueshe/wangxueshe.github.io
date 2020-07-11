@@ -1,8 +1,17 @@
+
+{% if page.mathjax %}
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+{% endif %}
+
 {% if site.footer_scripts %}
   {% for script in site.footer_scripts %}
+
     <script src="{{ script | relative_url }}"></script>
   {% endfor %}
 {% else %}
+
   <script src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
   <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
 {% endif %}
