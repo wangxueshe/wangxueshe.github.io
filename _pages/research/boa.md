@@ -36,10 +36,11 @@ For this reason, this work proposes a novel BoA estimation method that can be im
 
 **Uniform sampling** is a brute-force method to obtain the training data. For the example in **Fig. 1**, a bistable rocking disk has two equilibria: left-tilt and right-tilt. Its initial angle and angular velocity determine the equilibrium resting angle where it will eventually settle down, thus comprising the system's BoA. As shown in **Fig. 1(b)**, the uniform sampling method divides the state domain into, e.g., a $$40 \times 40$$ grids $$ = 1600$$ samples. Given the fact that BoA is essentially a domain divided into several sub-domains by continuous boundaries, the samples determing the boundaries (i.e. **near the boundaries**) are more important (or called **informative**). However, in **Fig. 1(c)**, only the 330 highlighted samples ($$20\%$$) were used to determine the boundary. In other words, uniform sampling wasted $$80\%$$ of its workload for uninformative samples.
 
-<figure style="width: 800px" class="align-center">
+<figure style="width: 85%" class="align-center">
 	<a href="/assets/images/research/boa/uniform_sampling.png"><img src="/assets/images/research/boa/uniform_sampling.png"></a>
 	<figcaption><b>Figure 1</b>. BoA for a bistable semi-elliptical rocking disk. <b>(a)</b> Two stable equilibria (points circled in black) of the rocking disk: left-tilt and right-tilt. <b>(b)</b> Uniform sampling of 40*40 initial conditions (x-axis for the disks's initial angle, y-axis for its initial angular velocity). The blue and orange points represent the basin of the left-tilt and right-tilt equilibrium respectively. <b>(c)</b> The black line represents the BoA boundary, which is determined by only the highlighted samples (20%). The majority of samples (80%) are far away from the boundary and have no effect on estimating the BoA. </figcaption>
 </figure>
+
 
 ### Part 1: Additional Sampling on Trajectories (AST) -- Get More Samples for "Free"
 
