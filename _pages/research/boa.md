@@ -5,6 +5,7 @@ mathjax: true
 title: Model-Free Sampling Method for Basins of Attraction Using Hybird Active Learning
 permalink: /research/fast-boa
 typora-root-url: ../../
+author_profile: true
 ---
 
 * **NOTE:** *This page is a brief introduction of a research work that will be published soon. The detailed information can be found on [arXiv](https://arxiv.org/abs/2003.10976)*.
@@ -46,7 +47,7 @@ For this reason, this work proposes a novel BoA estimation method that can be im
 
 Unlike general classification problems where samples are independent, BoA estimation is able to take advantage of **time series trajectories**. On a trajectory, every state converges to the same attractor and thus shares the same label. In other words, when the label of an initial condition is determined by one numerical simulation or experiment, the generated time series trajectory can be **sub-sampled** to obtain additional labeled samples (see **Fig. 2**).
 
-<figure style="width: 800px" class="align-center">
+<figure style="width: 85%" class="align-center">
 	<a href="/assets/images/research/boa/trajectory1.png"><img src="/assets/images/research/boa/trajectory1.png"></a>
 	<figcaption><b>Figure 2</b>. Additional sampling on trajectories (<b>AST</b>). All the circles are sub-sampled on the same time-series trajectory (blue line), thus sharing the same label (attractor). <b>(a)</b> Additional sampling in time domain. <b>(b)</b> Additional sampling on phase portrait. </figcaption>
 </figure>
@@ -54,12 +55,12 @@ Unlike general classification problems where samples are independent, BoA estima
 ### Part 2: Active Learning (AL) -- Select "Informative" Samples
 We alrady know that the samples near the boundary are more **informative** for BoA estimation, but how can we find them without prior knowledge of the boundary? The **margin-based active learning (AL)** was therefore selected, for it capability of proactively selecting the unlabeled samples most likely to be near a boundary. As shown in **Fig. 3**, many of labeled samples are located near the real yet unknown classification boundary, which avoids wasted effort on labeling the less informative samples (e.g. the ones at the top-left and bottom-right corners).
 
-<figure style="width: 750px" class="align-center">
+<figure style="width: 80%" class="align-center">
 	<a href="/assets/images/research/boa/AL.png"><img src="/assets/images/research/boa/AL.png"></a>
 	<figcaption><b>Figure 2</b>. Margin-based active learning (<b>AL</b>). The grey dashed line is the real classification boundary while the black lines are the classifiers trained by the labeled samples. <b>(a)</b> Create a pool of unlabeled data. <b>(b)</b> Label a random subset and fit a classifier. <b>(c, e, g)</b> Pick the closest point to the decision boundary. <b>(d, f, h)</b> Label the selected point and fit a new classifier. </figcaption>
 </figure>
 
-<figure style="width: 400px" class="align-right">
+<figure style="width: 43%" class="align-right">
 	<a href="/assets/images/research/boa/length.png"><img src="/assets/images/research/boa/length.png"></a>
 	<figcaption><b>Figure 3</b>. Unlabeled samples in <b>(a)</b> and <b>(b)</b> are equally close to the boundary, but the sample in  <b>(a)</b> leads to more additional samples using AST than <b>(b)</b>. </figcaption>
 </figure>
@@ -67,19 +68,18 @@ Another question then came out. Is a sample's "informativeness" only determined 
 
 As shown in the **Fig. 3**, when the margin-based AL determines the two unlabeled samples are equally close to the decision boundary, the one in **(a)** leads to a longer trajectory and more labeled samples, so it has higher priority to be labeled. Since choosing between possible samples requires estimating the lengths **prior to** generating the trajectories, a **predictive model** for the trajectory length given a state is needed. A **Gaussian process** model was selected since it can perform nonlinear regression, has controllable behavior when extrapolating, and needs no prior knowledge of the state distribution.
 
-
 ### Part 3: Density-Based Sampling (DBS) -- Select "Unfamiliar" Samples for Exploration
 Similar to the most learning algorithms, our sampling method should also deal with the **exploration/exploitation dilemma**. A sampling method built upon AL alone tends to exploit only and get stuck in the **local** BoA boundary. In order to explore the entire state space and estimate the boundary **globally**, an auxiliary sampling approach based on the density of labeled samples is introduced. This density-based method prioritizes exploring the region in which the fewest samples have been labeled. The detailed implementations of **DBS** can be found in the original work (**see the paper link at the top of this page**).
 
 ### Warp Everything Up
 Integrating the three parts above (**AST + AL + DBS**) leads to a hybrid active learning (**HAL**) sampling method for estimating BoA (see **Tab. 1**). 
-<figure style="width: 800px" class="align-center">
+<figure style="width: 85%" class="align-center">
 	<a href="/assets/images/research/boa/algorithm.png"><img src="/assets/images/research/boa/algorithm.png"></a>
 	<figcaption><b>Table 1</b>. Hybrid active learning (HAL) sampling method for estimating basins of attraction (BoA). </figcaption>
 </figure>
 
 ## Example
-<figure style="width: 400px" class="align-right">
+<figure style="width: 43%" class="align-right">
 	<a href="/assets/images/research/boa/bistable_system.png"><img src="/assets/images/research/boa/bistable_system.png"></a>
 	<figcaption><b>Figure 4</b>. Schematic of the magnet-induced bistable system. </figcaption>
 </figure>
@@ -91,12 +91,12 @@ $$
 
 It's worth noting that this governing equation has no conflict with the essence of our model-free sampling method. This equation gives simulation results to represent the data collected from experiments, yet was not directly used for the BoA estimation. 
 
-The animation below shows our HAL sampling method running on the first 7 episodes. In episode 1-4, HAL looks for the two coexisting attractors (represented by blue and orange respectively). In episode 5-7, the estimated BoA boundary converges to the real one by performing AL and DBS alternately.
+The **animation** below shows our HAL sampling method running on the first 7 episodes. In episode 1-4, HAL looks for the two coexisting attractors (represented by blue and orange respectively). In episode 5-7, the estimated BoA boundary converges to the real one by performing AL and DBS alternately.
 
 ![Alt Text](/assets/images/research/boa/algorithm.gif)
 
 After 36 episodes, the total labeled samples are shown in **Fig. 5**. 
-<figure style="width: 800px" class="align-center">
+<figure style="width: 85%" class="align-center">
 	<a href="/assets/images/research/boa/showcase1.png"><img src="/assets/images/research/boa/showcase1.png"></a>
 	<figcaption><b>Figure 5</b>. <b>(a)</b> The 36 samples selected to be labeled by our hybrid active learning (HAL) sampling method. <b>(b)</b> Additional samples on the time series trajectories generated by using samples in <b>(a)</b> as initial conditions. <b>(c)</b> BoA estimated by a neural network trained with the samples in <b>(b)</b>. </figcaption>
 </figure>

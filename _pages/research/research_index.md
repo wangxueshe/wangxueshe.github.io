@@ -1,6 +1,7 @@
 ---
 layout: splash
-auther_profile: true
+classes: wide
+author_profile: false
 permalink: /research/
 
 research_list:
@@ -11,19 +12,29 @@ research_list:
     btn_class: "btn--primary"
     btn_label: "Learn more"
 
-  - image_path: "/assets/images/research/harvester/cover_harvester.png"
-    title: "Attractor Switching for Optimizing Nonlinear Energy Harvesting"
-    excerpt: "Several control policies learned by a reinforcement learning method (DDPG) realizes nonlinear energy harvesters' operating on desired attractors."
-    url: "/research/switch-attractor-harvester"
-    btn_class: "btn--primary"
-    btn_label: "Not available now, coming soon!"
-
   - image_path: "/assets/images/research/duffing/cover_duffing.png"
     title: "Attractor Switching for Nonlinear Dynamical Systems Using Deep Reinforcement Learning"
     excerpt: "Two reinforcement learning algorithms (DDPG and CEM) were implemented to realize switching between coexisting attractors in nonlinear dynamical systems."
     url: "/research/switch-attractor-RL"
     btn_class: "btn--primary"
     btn_label: "Learn more"
+    
+  - image_path: "/assets/images/research/magnet/cover_magnet.png"
+    title: "Dynamics of a Non-Contact Translational-to-Rotational Magnetic Transmission"
+    excerpt: "This system exhibits nonlinear behaviors, such as harmonic, sub-harmonic, and chaotic responses, when the external excitation is sinusoidal."
+    url: "/research/magnetic-transmission"
+    btn_class: "btn--primary"
+    btn_label: "Learn more"
+    
+  - image_path: "/assets/images/research/harvester/cover_harvester.png"
+    title: "Attractor Switching for Optimizing Nonlinear Energy Harvesting"
+    excerpt: "Several control policies learned by a reinforcement learning method (DDPG) realizes nonlinear energy harvesters' operating on desired attractors."
+    url: "/research/switch-attractor-harvester"
+    btn_class: "btn--primary"
+    btn_label: "Not available now, coming soon!"    
+
 ---
+
+
 
 {% include feature_row id="research_list" type="left" %}

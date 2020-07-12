@@ -232,6 +232,7 @@
 
 .feature__wrapper {
   @include clearfix();
+  margin-left: 0;
   margin-bottom: 2em;
   border-bottom: 1px solid $border-color;
 
@@ -288,9 +289,9 @@
   &--left {
     position: relative;
     float: left;
-    margin-left: 0;
+    margin-left: 4em;
     margin-right: 0;
-    width: 100%;
+    width: 86%;
     clear: both;
     font-size: 1.125em;
 
