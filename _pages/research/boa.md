@@ -8,7 +8,7 @@ typora-root-url: ../../
 author_profile: true
 ---
 
-* **NOTE:** *This page is a brief introduction of a research work that will be published soon. The detailed information can be found on [arXiv](https://arxiv.org/abs/2003.10976)*.
+* **NOTE:** *This page is a brief introduction of a research work that will be published soon. The detailed information can be found on [arXiv](https://arxiv.org/abs/2003.10976)*. 
 
 ## Abstract
 
