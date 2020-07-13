@@ -13,11 +13,8 @@ author_profile: true
 ## Abstract
 
 * This work describes an approach for **attractor switching** (or multi-stability control) in nonlinear dynamical systems. 
-
 * Attractor switching is realized using two different deep **reinforcement learning** methods: the cross-entropy method (CEM) and the deep deterministic policy gradient (DDPG) method. 
-
 * Experiments were performed on a **Duffing oscillator**, which is a classic nonlinear dynamical system with multiple attractors. 
-
 * DDPG exhibits faster learning, lower performance variance, and smoother control than CEM. 
 
 ## Background and Motivation
@@ -28,16 +25,16 @@ Various applications with coexisting attractors motivates the development of con
 
 ## Reinforcement Learning Framework
 
-<figure style="width: 45%" class="align-right">
+In the reinforcement learning (RL) framework shown in **Fig. 1**, an **agent** gains experience by making **observations**, taking **actions** and receiving **rewards** from an **environment**, and then learns a **policy** from past experience to achieve goals (usually maximized cumulative **reward**). 
+
+<figure style="width: 60%" class="align-center">
 	<a href="/assets/images/research/duffing/RL_schematic.png"><img src="/assets/images/research/duffing/RL_schematic.png"></a>
 	<figcaption><b>Figure 1</b>. The typical framework of Reinforcement Learning. An agent has two tasks in each iteration: (1) taking an action based on the observation from environment and the current policy; (2) updating the current policy based on the immediate reward from environment and the estimated future rewards.</figcaption>
 </figure>
 
-In the reinforcement learning (RL) framework shown in **Fig. 1**, an **agent** gains experience by making **observations**, taking **actions** and receiving **rewards** from an **environment**, and then learns a **policy** from past experience to achieve goals (usually maximized cumulative **reward**). 
-
 This work implements RL algorithms to realize attractor selection (control of multi-stability) for nonlinear dynamical systems with constrained actuation. As a representative system possessing multiple attractors, the **Duffing oscillator** was chosen to demonstrate implementation details. 
 
-A harmonically forced Duffing oscillator can be described by the equation $$ \ddot{x} + \delta \dot{x} + \alpha x + \beta x^3 = \Gamma \cos{\omega t} $$. **Fig. 2** shows an example of coexisting stead-state oscillations. With a long-run time evolution, the oscillation of the unstable solution cannot be maintained due to inevitable small perturbations. The system will always eventually settle into one of the stable steady-state responses of the system, which are therefore considered **attractors**. Our objective is to apply control to the Duffing oscillator to make it switch between the two attractors as the dotted line in **Fig. 2(b)**. 
+A harmonically forced Duffing oscillator can be described by the differential equation $$ \ddot{x} + \delta \dot{x} + \alpha x + \beta x^3 = \Gamma \cos{\omega t} $$. **Fig. 2** shows an example of coexisting stead-state oscillations. With a long-run time evolution, the oscillation of the unstable solution cannot be maintained due to inevitable small perturbations. The system will always eventually settle into one of the stable steady-state responses of the system, which are therefore considered **attractors**. Our objective is to apply control to the Duffing oscillator to make it switch between the two attractors as the dotted line in **Fig. 2(b)**. 
 
 <figure style="width: 75%" class="align-center">
 	<a href="/assets/images/research/duffing/Duffing.png"><img src="/assets/images/research/duffing/Duffing.png"></a>
@@ -67,7 +64,7 @@ The control policy for attractor switching was learned by using two RL algorithm
 
 To test how DDPG performs, constraints were constructed with varying levels of difficulty, i.e., different action bounds. The action bound is the maximum allowed absolute value for action. For example, if the action bound = 4, the control input $$a(s)$$ is only allowed to vary between $$-4$$ and $$+4$$. For simplicity, the attractor with a small amplitude of steady-state response is named **SA** while that with a large amplitude is named **LA**.
 
-<figure style="width: 80%" class="align-center">
+<figure style="width: 90%" class="align-center">
 	<a href="/assets/images/research/duffing/DDPG.png"><img src="/assets/images/research/duffing/DDPG.png"></a>
 	<figcaption><b>Figure 3</b>. Attractor selection using control policy learned by DDPG with varying action bounds: (a) = 4, (b) = 2, (c) = 1. The blue lines represent the Duffing oscillator running in the attractor SA, which has a periodic solution with small amplitude. The orange lines represent the Duffing oscillator running in the attractor LA, which has a periodic solution with large amplitude. The black dashed lines represent the Duffing oscillator under control. Each plot of the system's responses in the first row corresponds to the two sub-plots of the control processes in the second row: attractor SA-to-LA and attractor LA-to-SA. </figcaption>
 </figure>

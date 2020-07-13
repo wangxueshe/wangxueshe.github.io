@@ -26,6 +26,13 @@ research_list:
     btn_class: "btn--primary"
     btn_label: "Learn more"
     
+  - image_path: "/assets/images/research/disk/cover_disk.png"
+    title: "Dynamics of Unforced and Vertically Forced Rocking Elliptical and Semi-Elliptical Disks"
+    excerpt: "The rocking disk can be mono-stable or bi-stable by altering its geometry. Its dynamic response exhibits multiple periodicities under vertical excitations."
+    url: "/research/rocking-disk"
+    btn_class: "btn--primary"
+    btn_label: "Learn more"
+    
   - image_path: "/assets/images/research/harvester/cover_harvester.png"
     title: "Attractor Switching for Optimizing Nonlinear Energy Harvesting"
     excerpt: "Several control policies learned by a reinforcement learning method (DDPG) realizes nonlinear energy harvesters' operating on desired attractors."

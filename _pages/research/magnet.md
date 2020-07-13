@@ -13,9 +13,7 @@ author_profile: true
 ## Abstract
 
 * This work presents an exploratory transmission design to combine three features together: **1) translation-to-rotation, 2) non-contact, and 3) nonlinearity**.
-
 * The system's **governing equations** were derived under the idealization of a magnetic dipole, and were used to obtain analytical expressions for the system's **equilibria and stabilities**.
-
 * Theoretical, numerical and experimental investigations all unveil **nonlinear dynamical behaviors**, such as coexisting harmonic, sub-harmonic, and chaotic responses, under sinusoidal excitation.
 
 ## Background and Motivation
@@ -41,7 +39,7 @@ Therefore, the **equation of motion** can be written as a linear mass-spring-dam
 In the **LHS**, $$I$$, $$c$$, $$k$$ and $$\theta_0$$ are the driven magnet's moment of inertia, torsional spring coefficient, torsional damping coefficient, and offset bias angle of spring respectively. The **RHS** is the expression of magnetic torque derived by using **Dipole model**, which is determined by three variables: the angle of the driven magnet $$\theta$$, the horizontal distance between two magnets $$x$$, which is described by $$b + A\cos(\Omega t)$$, and the vertical distance between two magnets $$h$$. The factor $$\alpha$$ is a constant describing magnetic properties of the drive and driven magnets. The detailed derivation of this equation of motion can be found in the published paper (**see links at the top of this page**).
 
 ## Equilibrium and Stability
-The system's equilibria are the **static angles** of the driven magnet under its varying relative positions with the drive magnet. The following two group of animations demonstrate how the equilibria angle $$\theta$$ varies with the **vertical distance** $$h$$ and the **horizontal distance** $$b$$ between the drive and driven magnets. 
+The system's equilibrium (i.e., the **static angles** of the driven magnet) varies with the relative position between the drive and driven magnets. The following two group of animations demonstrate how the equilibrium angle $$\theta$$ varies with the **vertical distance** $$h$$ and the **horizontal distance** $$b$$ between the drive and driven magnets. 
 
 <img src="/assets/images/research/magnet/bifur_h.gif" width="100%" />
 
