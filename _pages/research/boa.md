@@ -1,11 +1,12 @@
 ---
 layout: single
-classes: wide
 mathjax: true
 title: Model-Free Sampling Method for Basins of Attraction Using Hybird Active Learning
 permalink: /research/fast-boa
 typora-root-url: ../../
 author_profile: true
+toc: true
+toc_sticky: true
 ---
 
 * **NOTE:** *This page is a brief introduction of a research work that will be published soon. The detailed information can be found on [arXiv](https://arxiv.org/abs/2003.10976)*. 
@@ -37,7 +38,7 @@ For this reason, this work proposes a novel BoA estimation method that can be im
 
 **Uniform sampling** is a brute-force method to obtain the training data. For the example in **Fig. 1**, a bistable rocking disk has two equilibria: left-tilt and right-tilt. Its initial angle and angular velocity determine the equilibrium resting angle where it will eventually settle down, thus comprising the system's BoA. As shown in **Fig. 1(b)**, the uniform sampling method divides the state domain into, e.g., $$40 \times 40$$ grids $$ = 1600$$ samples. Given the fact that BoA is essentially a domain divided into several sub-domains by continuous boundaries, the samples determing the boundaries (i.e. **near the boundaries**) are more important (or called **informative**). However, in **Fig. 1(c)**, only the 330 highlighted samples ($$20\%$$) were used to determine the boundary. In other words, uniform sampling wasted $$80\%$$ of its workload for uninformative samples.
 
-<figure style="width: 85%" class="align-center">
+<figure style="width: 100%" class="align-center">
 	<a href="/assets/images/research/boa/uniform_sampling.png"><img src="/assets/images/research/boa/uniform_sampling.png"></a>
 	<figcaption><b>Figure 1</b>. BoA for a bistable semi-elliptical rocking disk. <b>(a)</b> Two stable equilibria (points circled in black) of the rocking disk: left-tilt and right-tilt. <b>(b)</b> Uniform sampling of 40*40 initial conditions (x-axis for the disks's initial angle, y-axis for its initial angular velocity). The blue and orange points represent the basin of the left-tilt and right-tilt equilibrium respectively. <b>(c)</b> The black line represents the BoA boundary, which is determined by only the highlighted samples (20%). The majority of samples (80%) are far away from the boundary and have no effect on estimating the BoA. </figcaption>
 </figure>
@@ -47,7 +48,7 @@ For this reason, this work proposes a novel BoA estimation method that can be im
 
 Unlike general classification problems where samples are independent, BoA estimation is able to take advantage of **time series trajectories**. On a trajectory, every state converges to the same attractor and thus shares the same label. In other words, when the label of an initial condition is determined by one numerical simulation or experiment, the generated time series trajectory can be **sub-sampled** to obtain additional labeled samples (see **Fig. 2**).
 
-<figure style="width: 85%" class="align-center">
+<figure style="width: 100%" class="align-center">
 	<a href="/assets/images/research/boa/trajectory1.png"><img src="/assets/images/research/boa/trajectory1.png"></a>
 	<figcaption><b>Figure 2</b>. Additional sampling on trajectories (<b>AST</b>). All the circles are sub-sampled on the same time-series trajectory (blue line), thus sharing the same label (attractor). <b>(a)</b> Additional sampling in time domain. <b>(b)</b> Additional sampling on phase portrait. </figcaption>
 </figure>
@@ -55,7 +56,7 @@ Unlike general classification problems where samples are independent, BoA estima
 ### Part 2: Active Learning (AL) -- Select "Informative" Samples
 We alrady know that the samples near the boundary are more **informative** for BoA estimation, but how can we find them without prior knowledge of the boundary? The **margin-based active learning (AL)** was therefore selected, for it capability of proactively selecting the unlabeled samples most likely to be near a boundary. As shown in **Fig. 3**, many of labeled samples are located near the real yet unknown classification boundary, which avoids wasted effort on labeling the less informative samples (e.g. the ones at the top-left and bottom-right corners).
 
-<figure style="width: 80%" class="align-center">
+<figure style="width: 100%" class="align-center">
 	<a href="/assets/images/research/boa/AL.png"><img src="/assets/images/research/boa/AL.png"></a>
 	<figcaption><b>Figure 2</b>. Margin-based active learning (<b>AL</b>). The grey dashed line is the real classification boundary while the black lines are the classifiers trained by the labeled samples. <b>(a)</b> Create a pool of unlabeled data. <b>(b)</b> Label a random subset and fit a classifier. <b>(c, e, g)</b> Pick the closest point to the decision boundary. <b>(d, f, h)</b> Label the selected point and fit a new classifier. </figcaption>
 </figure>
@@ -74,7 +75,7 @@ Similar to the most learning algorithms, our sampling method should also deal wi
 
 ### Warp Everything Up
 Integrating the three parts above (**AST + AL + DBS**) leads to a hybrid active learning (**HAL**) sampling method for estimating BoA (see **Tab. 1**). 
-<figure style="width: 85%" class="align-center">
+<figure style="width: 100%" class="align-center">
 	<a href="/assets/images/research/boa/algorithm.png"><img src="/assets/images/research/boa/algorithm.png"></a>
 	<figcaption><b>Table 1</b>. Hybrid active learning (HAL) sampling method for estimating basins of attraction (BoA). </figcaption>
 </figure>
@@ -88,7 +89,7 @@ $$
 
 It's worth noting that this governing equation has no conflict with the essence of our model-free sampling method. This equation gives simulation results to represent the data collected from experiments, yet was not directly used for the BoA estimation. 
 
-<figure style="width: 50%" class="align-center">
+<figure style="width: 100%" class="align-center">
 	<a href="/assets/images/research/boa/bistable_system.png"><img src="/assets/images/research/boa/bistable_system.png"></a>
 	<figcaption><b>Figure 4</b>. Schematic of the magnet-induced bistable system. </figcaption>
 </figure>
@@ -98,7 +99,7 @@ The **animation** below shows our HAL sampling method running on the first 7 epi
 ![Alt Text](/assets/images/research/boa/algorithm.gif)
 
 After 36 episodes, the total labeled samples are shown in **Fig. 5**. 
-<figure style="width: 85%" class="align-center">
+<figure style="width: 100%" class="align-center">
 	<a href="/assets/images/research/boa/showcase1.png"><img src="/assets/images/research/boa/showcase1.png"></a>
 	<figcaption><b>Figure 5</b>. <b>(a)</b> The 36 samples selected to be labeled by our hybrid active learning (HAL) sampling method. <b>(b)</b> Additional samples on the time series trajectories generated by using samples in <b>(a)</b> as initial conditions. <b>(c)</b> BoA estimated by a neural network trained with the samples in <b>(b)</b>. </figcaption>
 </figure>
