@@ -1,11 +1,12 @@
 ---
 layout: single
-classes: wide
 mathjax: true
 title: Nonlinear Dynamics of a Non-Contact Translational-to-Rotational Magnetic Transmission
 permalink: /research/magnetic-transmission
 typora-root-url: ../../
 author_profile: true
+toc: true
+toc_sticky: true
 ---
 
 * **NOTE:** *This page is a brief introduction of a published work. The detailed information can be found on [Journal of Sound and Vibration](https://www.sciencedirect.com/science/article/abs/pii/S0022460X19304158) and [Nonlinear Structure and Systems](https://link.springer.com/chapter/10.1007/978-3-030-12391-8_12).*
@@ -26,13 +27,13 @@ Although various types of magnetic transmission systems have been proposed, cons
 
 As shown in **Fig. 1**, the **drive magnet** is fixed to a vibration source and has a prescribed **translational harmonic** motion. The **driven magnet** is pinned and limited to **pure rotation** about its center of mass. The drive magnet applies a non-contact **magnetic force** to the driven magnet to achieve translational-to-rotational conversion. In addition to the magnetic force, the driven magnet is also subject to a **linear restoring torque** from mechanical springs and a **damping torque** which is assumed to be **viscous** and proportional to the driven magnet's angular velocity. 
 
-<figure style="width: 80%" class="align-center">
+<figure style="width: 100%" class="align-center">
 	<a href="/assets/images/research/magnet/schematic.png"><img src="/assets/images/research/magnet/schematic.png"></a>
 	<figcaption><b>Figure 1</b>. Schematic diagram of the non-contact translational-to-rotational transmission system. </figcaption>
 </figure>
 Therefore, the **equation of motion** can be written as a linear mass-spring-damper system driven by magnetic torque:
 
-<figure style="width: 80%" class="align-center">
+<figure style="width: 100%" class="align-center">
 	<a href="/assets/images/research/magnet/eom.png"><img src="/assets/images/research/magnet/eom.png"></a>
 </figure>
 
@@ -56,7 +57,7 @@ The dynamic response of a physical system to varying excitation frequencies is o
 </figure>
 
 Apart from response frequency and amplitude (grey areas in **Fig. 2**), stroboscopic samples (black dots in **Fig. 2**) were also implemented to show the **periodicity** of the response (see **Tab. 1**). For example, when the excitation level $$A=4$$ mm and the excitation frequency is swept backwards (see **Fig. 2(f)**), the system exhibits period-1 harmonic, period-2 sub-harmonic, period-3 sub-harmonic and choatic responses. 
-<figure style="width: 80%" class="align-center">
+<figure style="width: 100%" class="align-center">
 	<a href="/assets/images/research/magnet/table_strob.png"><img src="/assets/images/research/magnet/table_strob.png"></a>
 	<figcaption><b>Table 1</b>. Stroboscopic point patterns in <b>Fig. 2</b>, where &Omega; is the excitation frequency. </figcaption>
 </figure>

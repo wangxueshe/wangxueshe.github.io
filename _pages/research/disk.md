@@ -1,11 +1,12 @@
 ---
 layout: single
-classes: wide
 mathjax: true
 title: Dynamics of Unforced and Vertically Forced Rocking Elliptical and Semi-Elliptical Disks
 permalink: /research/rocking-disk
 typora-root-url: ../../
 author_profile: true
+toc: true
+toc_sticky: true
 ---
 
 * **NOTE:** *This page is a brief introduction of a published work. The detailed information can be found on [Journal of Sound and Vibration](https://www.sciencedirect.com/science/article/abs/pii/S0022460X17308568).*
@@ -26,7 +27,7 @@ Another perspective that has not yet been fully investigated is the behavior of 
 
 As shown in **Fig. 1**, the disk is rocking on a flat surface which has a prescribed **sinusoidal** velocity $$\dot{\Gamma}(t) = A \cos {(\Omega t)}$$. The surfaces of the disks are defined by $$x^{2}/a^{2} + y^{2}/b^{2} = 1$$, where $$a$$ and $$b$$ are the major and minor radii of the disks, respectively. It's assumes that the disk has a **uniform density** and rolls **without slip** on the base. When deriving the equation of motion, the case of the **semi-elliptical** disk was used, since the governing equation for the **elliptical** disk can be obtained from the governing equation for the semi-elliptical disk through two parameter substitutions (will talk it later).
 
-<figure style="width: 80%" class="align-center">
+<figure style="width: 100%" class="align-center">
 	<a href="/assets/images/research/disk/schematic.png"><img src="/assets/images/research/disk/schematic.png"></a>
 	<figcaption><b>Figure 1</b>. Schematic of a rocking semi-elliptical disk showing both the upright and displaced positions of the object. The disk is vertically excited by the base with a sinusoidal velocity. </figcaption>
 </figure>
@@ -53,7 +54,7 @@ The system's equilibrium (the **static angles** of the rocking disk) varies with
 
 For the **semi-elliptical** disk, as shown in **Fig. 2**, there exists a critical value for the $$a$$-to-$$b$$ ratio, $$r_\text{c} = \sqrt{1 - 4 / 3 \pi}$$. The system has one stable equilibrium position (**monostable**) at $$\theta = 0$$ when $$a/b > r_\text{c}$$. A super-critical pitchfork bifurcation occurs at $$a/b = r_\text{c}$$, resulting in a reversal of stability for the equilibrium position at $$\theta = 0$$ when $$a / b < r_\text{c}$$, as well as the creation of two new stable equilibrium (**bistable**) positions.
 
-<figure style="width: 90%" class="align-center">
+<figure style="width: 100%" class="align-center">
 	<a href="/assets/images/research/disk/eq.png"><img src="/assets/images/research/disk/eq.png"></a>
 	<figcaption><b>Figure 2</b>. Super-critical pitchfork bifurcation diagram showing the stable (solid blue lines) and unstable (dashed green line) equilibria as a function of the dimensionless ratio <var>a</var>/<var>b</var> for the rocking semi-elliptical disk. </figcaption>
 </figure>
@@ -73,7 +74,7 @@ Apart from response frequency and amplitude (grey areas in **Fig. 2**), strobosc
 * Mode 2: $$f=f_0$$, a harmonic response where the disk rocks back and forth once every excitation period. See **Fig. 3(b)**.
 * Mode 3: Multiple frequencies $$f=\frac{1}{2}f_0, \frac{3}{2}f_o, \frac{5}{2}f_o \dots$$, where the sub-harmonic response combines with higher frequencies and the stroboscopic points appear identical to Mode 1. See **Fig. 3(c, d)**.
 
-<figure style="width: 75%" class="align-center">
+<figure style="width: 100%" class="align-center">
 	<a href="/assets/images/research/disk/mode.png"><img src="/assets/images/research/disk/mode.png"></a>
 	<figcaption><b>Figure 3</b>. Time series illustrating the three periodic modes. <b>(a)-(c)</b> show the excitation (dashed red line) and the disk's response (solid blue line).  <b>Stroboscopic</b> samples (black dots) were overlaid onto the time series. Plot <b>(d)</b> shows the frequency spectrum for Mode 3 with a vertical dashed line at the excitation frequency.</figcaption>
 </figure>

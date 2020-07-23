@@ -1,7 +1,7 @@
 ---
-layout: splash
+layout: single
 classes: wide
-author_profile: false
+author_profile: true
 permalink: /research/
 
 research_list:

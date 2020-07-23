@@ -8,12 +8,12 @@
 
   @include breakpoint($large) {
     float: right;
-    width: calc(100% - #{$right-sidebar-width-narrow});
+    width: calc(100% - #{$left-sidebar-width-narrow});
     padding-right: $right-sidebar-width-narrow;
   }
 
   @include breakpoint($x-large) {
-    width: calc(100% - #{$right-sidebar-width});
+    width: calc(100% - #{$left-sidebar-width});
     padding-right: $right-sidebar-width;
   }
 }
@@ -294,12 +294,29 @@
     clear: both;
     font-size: 1.125em;
 
+    h1, h2, h3, h4 {
+      font-size: 1em;
+    }
+
     .archive__item {
+      margin-bottom: 1.8em;
       float: left;
     }
 
     .archive__item-teaser {
-      margin-bottom: 2em;
+      margin-bottom: 1em;
+    }
+
+    .archive__item-title {
+      margin-top: 0em;
+    }
+
+    .archive__item-body p {
+      margin-bottom: 0em;      
+    }
+
+    .archive__item-excerpt p {
+      margin-bottom: 1em;      
     }
 
     a.btn::before {
@@ -313,6 +330,7 @@
 
     @include breakpoint($small) {
       .archive__item-teaser {
+        margin-bottom: 0em;
         float: left;
         width: span(5 of 12);
       }
@@ -434,7 +452,7 @@
    Wide Pages
    ========================================================================== */
 
-  .wide {
+.wide {
   .archive {
     @include breakpoint($large) {
       padding-right: 0;
