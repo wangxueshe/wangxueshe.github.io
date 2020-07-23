@@ -102,6 +102,9 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: mailto:xueshe.wang@gmail.com
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-university"
+      url: "https://scholar.google.com/citations?user=n8ro8WAAAAAJ"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"

@@ -28,7 +28,7 @@ Various applications with coexisting attractors motivates the development of con
 
 In the reinforcement learning (RL) framework shown in **Fig. 1**, an **agent** gains experience by making **observations**, taking **actions** and receiving **rewards** from an **environment**, and then learns a **policy** from past experience to achieve goals (usually maximized cumulative **reward**). 
 
-<figure style="width: 100%" class="align-center">
+<figure style="width: 100%; max-width:600px" class="align-center">
 	<a href="/assets/images/research/duffing/RL_schematic.png"><img src="/assets/images/research/duffing/RL_schematic.png"></a>
 	<figcaption><b>Figure 1</b>. The typical framework of Reinforcement Learning. An agent has two tasks in each iteration: (1) taking an action based on the observation from environment and the current policy; (2) updating the current policy based on the immediate reward from environment and the estimated future rewards.</figcaption>
 </figure>

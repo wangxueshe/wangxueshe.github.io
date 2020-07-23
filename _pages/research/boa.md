@@ -65,7 +65,7 @@ Another question then came out. Is a sample's "informativeness" only determined 
 
 As shown in the **Fig. 3**, when the margin-based AL determines the two unlabeled samples are equally close to the decision boundary, the one in **(a)** leads to a longer trajectory and more labeled samples, so it has higher priority to be labeled. Since choosing between possible samples requires estimating the lengths **prior to** generating the trajectories, a **predictive model** for the trajectory length given a state is needed. A **Gaussian process** model was selected since it can perform nonlinear regression, has controllable behavior when extrapolating, and needs no prior knowledge of the state distribution.
 
-<figure style="width: 50%" class="align-center">
+<figure style="width: 100%; max-width:450px;" class="align-center">
 	<a href="/assets/images/research/boa/length.png"><img src="/assets/images/research/boa/length.png"></a>
 	<figcaption><b>Figure 3</b>. Unlabeled samples in <b>(a)</b> and <b>(b)</b> are equally close to the boundary, but the sample in  <b>(a)</b> leads to more additional samples using AST than <b>(b)</b>. </figcaption>
 </figure>
@@ -89,7 +89,7 @@ $$
 
 It's worth noting that this governing equation has no conflict with the essence of our model-free sampling method. This equation gives simulation results to represent the data collected from experiments, yet was not directly used for the BoA estimation. 
 
-<figure style="width: 100%" class="align-center">
+<figure style="width: 100%; max-width: 450px" class="align-center">
 	<a href="/assets/images/research/boa/bistable_system.png"><img src="/assets/images/research/boa/bistable_system.png"></a>
 	<figcaption><b>Figure 4</b>. Schematic of the magnet-induced bistable system. </figcaption>
 </figure>
