@@ -21,6 +21,9 @@
 .archive__item {
   position: relative;
 
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+
   a {
     position: relative;
     z-index: 10;
@@ -274,6 +277,18 @@
   .archive__item-body {
     padding-left: gutter(1 of 12);
     padding-right: gutter(1 of 12);
+    margin-bottom: 0.4em;
+    margin-top: 0.4em;   
+  }
+
+  .archive__item-body p {
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;      
+  }
+
+  .archive__item-excerpt p {
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;      
   }
 
   a.btn::before {
@@ -304,11 +319,13 @@
     }
 
     .archive__item-teaser {
-      margin-bottom: 1em;
+      margin-bottom: 0.5em;
     }
 
     .archive__item-title {
       margin-top: 0em;
+      margin-bottom: 0.3em;
+      padding-bottom: 0;
     }
 
     .archive__item-body p {
@@ -316,7 +333,7 @@
     }
 
     .archive__item-excerpt p {
-      margin-bottom: 1em;      
+      margin-bottom: 0.8em;      
     }
 
     a.btn::before {
