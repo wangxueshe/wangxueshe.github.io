@@ -1,7 +1,6 @@
 ---
-layout: posts
 classes: wide
-title: "【乐理】音程记忆表"
+title: "【乐理 Music Theory】音程记忆表 Interval Songs"
 excerpt: "上升及下降音程，与其对应的常见歌曲旋律。"
 mathjax: true
 tags: 
