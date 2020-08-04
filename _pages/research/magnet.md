@@ -33,7 +33,7 @@ As shown in **Fig. 1**, the **drive magnet** is fixed to a vibration source and 
 </figure>
 Therefore, the **equation of motion** can be written as a linear mass-spring-damper system driven by magnetic torque:
 
-<figure style="width: 100%" class="align-center">
+<figure style="width: 100%; margin: 0" class="align-center">
 	<a href="/assets/images/research/magnet/eom.png"><img src="/assets/images/research/magnet/eom.png"></a>
 </figure>
 

@@ -10,8 +10,8 @@ main:
     url: /posts-archive/
   - title: "Credits"
     url: /credits/
-  - title: "Minimal-Mistakes Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  # - title: "Minimal-Mistakes Guide"
+  #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
