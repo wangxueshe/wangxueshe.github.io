@@ -9,7 +9,7 @@ toc: true
 toc_sticky: true
 ---
 
-* **NOTE:** *This page is a brief introduction of a published work. The detailed information can be found on [Journal of Sound and Vibration](https://www.sciencedirect.com/science/article/abs/pii/S0022460X17308568).*
+* **NOTE:** *This page is a brief introduction of a published work. The detailed information can be found on [Journal of Sound and Vibration](https://www.sciencedirect.com/science/article/abs/pii/S0022460X17308568){:target="_blank"}.*
 
 ## Abstract
 

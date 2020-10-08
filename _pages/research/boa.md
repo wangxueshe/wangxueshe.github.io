@@ -9,7 +9,7 @@ toc: true
 toc_sticky: true
 ---
 
-* **NOTE:** *This page is a brief introduction of a research work that will be published soon. The detailed information can be found on [arXiv](https://arxiv.org/abs/2003.10976)*. 
+* **NOTE:** *This page is a brief introduction of a research work that will be published soon. The preprint version can be found on [arXiv](https://arxiv.org/abs/2003.10976){:target="_blank"}*. 
 
 ## Abstract
 

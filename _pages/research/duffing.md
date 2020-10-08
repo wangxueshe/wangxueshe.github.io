@@ -9,7 +9,7 @@ toc: true
 toc_sticky: true
 ---
 
-* **NOTE:** *This page is a brief introduction of a published work. The detailed information can be found on [arXiv](https://arxiv.org/abs/1909.10500) and [Journal of Vibration and Control](https://journals.sagepub.com/doi/abs/10.1177/1077546320930144).*
+* **NOTE:** *This page is a brief introduction of a published work. The detailed information can be found on [arXiv](https://arxiv.org/abs/1909.10500){:target="_blank"} and [Journal of Vibration and Control](https://journals.sagepub.com/doi/abs/10.1177/1077546320930144){:target="_blank"}.*
 
 ## Abstract
 

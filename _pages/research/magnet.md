@@ -9,7 +9,7 @@ toc: true
 toc_sticky: true
 ---
 
-* **NOTE:** *This page is a brief introduction of a published work. The detailed information can be found on [Journal of Sound and Vibration](https://www.sciencedirect.com/science/article/abs/pii/S0022460X19304158) and [Nonlinear Structure and Systems](https://link.springer.com/chapter/10.1007/978-3-030-12391-8_12).*
+* **NOTE:** *This page is a brief introduction of a published work. The detailed information can be found on [Journal of Sound and Vibration](https://www.sciencedirect.com/science/article/abs/pii/S0022460X19304158){:target="_blank"} and [Nonlinear Structure and Systems](https://link.springer.com/chapter/10.1007/978-3-030-12391-8_12){:target="_blank"}.*
 
 ## Abstract
 
